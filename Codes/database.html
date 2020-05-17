@@ -1,0 +1,97 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <meta charset="utf-8">
+    <title>Online Police Investigation</title>
+    <meta name="Keywords"
+        
+    <meta name="Description" content="Get snacks">
+    <meta name="theme-color" content="#64ffda" />
+    <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1" />
+    <link rel="stylesheet" type="text/css" media="screen" href="../main.css">
+    <!--Import Google Icon Font-->
+    <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
+    <!-- Compiled and minified CSS -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/materialize/1.0.0/css/materialize.min.css">
+</head>
+
+<style>
+    body {
+        padding-bottom: 140px;
+    }
+</style>
+
+<body>
+
+<table class="striped responsive-table">
+    <thead>
+        <tr>
+            <th>Name</th>
+            <th>Report number</th>
+            <th>AAdhar number</th>
+            <th>Phone Number</th>
+            <th>Location</th>
+            <th>Description</th>
+        </tr>
+    </thead>
+    <tbody>
+
+<tr>
+            <td>Mudit yadav</td>
+            <td>3</td>
+            <td><div class='input-field inline'><input type='number' data-id='1' value='12234567' onkeypress='insert(event, this)'></div></td>
+            <td><div class='input-field inline'><input type='number' data-id='1' value='9246460918' onkeypress='insert(event, this)'></div></td>
+            <td>Manorangitham Hostel,SRMIST</td>
+            <td>Drug-dealing is Happening inside the 2nd floor of the hostel</td>
+        </tr>
+</tbody>
+</table>
+
+    <div id="instock" class="card-panel teal">
+        <span class="white-text">
+            <div class="row">
+                <div class="col m5">
+                    <div class="center">
+                        <div class="container">
+                            <table class="responsive-table">
+                                <thead>
+                                    <tr>
+                                        <th>Reports</th>
+                                    </tr>
+                                </thead>
+                                <tbody>
+                                    <tr>
+                                        <td>3</td>
+                                    </tr>
+                                </tbody>
+                            </table>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </span>
+    </div>
+
+<script>
+    
+    function insert(e, tagchange) {
+
+        if(e.keyCode == '13')
+        {
+            id = tagchange.getAttribute('data-id');
+            name = tagchange.getAttribute('data-change');
+            
+            window.location.href = 'database_update.php?id='+id+'&name='+name+'&change='+tagchange.value;
+        }
+    }
+
+    //Refresh the page
+    setTimeout(function(){
+        location.reload();
+    }, 30000)
+
+</script>
+
+</body>
+</html>
